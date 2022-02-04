@@ -55,43 +55,13 @@ def sphericalToCartesian(float sphericalPoints[], float cartesianPoints[]:
   cartesianPoints[2] = z;
 
 #camera 2개, Lidar sensor 1개, person 1명, Kiosk 1대, Height measure, 
-"""Height 측정은 그냥 이미지 뽑아서 거리 측정하고 키 재겠다는 건데
-Position your device so that the target is inside the app’s viewfinder, from head to toe.
-
-height 측정하는 방법은 사람의 발끝에서 머리끝까지 카메라 위치를 고정 시키고 
-고정시키기 어렵다면 사람의 발끝과 머리끝의 위치를 detection 하는 기법을 이용한다.
-body detection
-using measuring tape and py
+"""
 We took the body's measurements of the participants manually using a measuring tape to measure their
 shoulder, bust, waist, hip, and length with centimeter as the measurement unit.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-그리고 detection 후 사람의 발끝에서 머리끝까지의 measure을 depth를 이용해서 
-distance를 계산을 라이다 센서 중앙에서 빛을 쏘아서 
-distance 가치를 가져오고 distance가 10일 경우, 
-height이 이미지 상에서 10cm로 측정이 된다면, 
-카메라에서 5cm distance를 가질 때, 키가 10 cm 이라면 실제 측정 키는 100cm 로
-보면 되기에 앞서 말한 것에서는 실제 키가 200cm 가 된다. 
-
-이런 식으로 실제 키를 저장해두고 키를 측정하면 된다. 
-그리고 라이다 센서를 통해서 3D reconstruction을 구현하는 방법은 
-point cloud 데이터를 변환하는 코드를 이용하고 
-point cloud 데이터를 통해서 3D로 구현하는 데 좀 더 현실과 표현하고 싶다면 
-mesh 나 photogrammetry 이용하면 된다. 
 
 그리고 라이다 센서 장착은  
 
@@ -100,6 +70,10 @@ mesh 나 photogrammetry 이용하면 된다.
 camera_1 = getvideo()
 camera_1.array()
 features_camera_1 = camera_1.calculated_features
+
+lidar_dataset = get.lidar_yml()
+
+
 if distance_between_features_body_toe == 0:
     img_camera_1_part_as_toe = "toe"
     img_camera_1_part_as_head = "head"
