@@ -1,0 +1,14 @@
+#import PIL 
+pip3 install Pillow 
+
+#need Image package from Pillow 
+
+# to install lidar from PyPI package 
+pip install lidar
+conda create -n py38 python=3.8
+conda activate py38
+conda install lidar -c conda-forge
+
+#Upgrade lidar
+pip install -U lidar
+conda update lidar -c conda-forge
