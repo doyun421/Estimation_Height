@@ -24,6 +24,13 @@ cv2.destroyAllWindows()
 
 
 
+
+
+
+
+
+
+
 for i in range(10):
     frame_1, image_1 = CAMERA_1.read()
     frame_2, image_2 = CAMERA_2.read()
@@ -61,11 +68,23 @@ shoulder, bust, waist, hip, and length with centimeter as the measurement unit.
 
 
 
+라이다 센서
+라이다 센서 소프트 웨어
+키 측정
+거리 측정
+정확도 개선
+3D reconstruction
+이용 가치
+사람들의 
+
+예쁘게 정리하고 싶다. 
 
 
 그리고 라이다 센서 장착은  
 
 """
+
+
 
 camera_1 = getvideo()
 camera_1.array()
